@@ -1,0 +1,48 @@
+# GameEvent
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Id** | [***Object**](.md) |  | [optional] [default to null]
+**Priority** | [***Object**](.md) |  | [optional] [default to null]
+**NameKey** | [***Object**](.md) |  | [optional] [default to null]
+**SummaryKey** | [***Object**](.md) |  | [optional] [default to null]
+**DescKey** | [***Object**](.md) |  | [optional] [default to null]
+**Image** | [***Object**](.md) |  | [optional] [default to null]
+**Type_** | [***Object**](.md) |  | [optional] [default to null]
+**Instance** | [***Object**](.md) |  | [optional] [default to null]
+**Status** | [***Object**](.md) |  | [optional] [default to null]
+**CampaignElementIdentifier** | [***CampaignElementIdentifier**](CampaignElementIdentifier.md) |  | [optional] [default to null]
+**SquadType** | [***Object**](.md) |  | [optional] [default to null]
+**PreviewKey** | [***Object**](.md) |  | [optional] [default to null]
+**ReviewKey** | [***Object**](.md) |  | [optional] [default to null]
+**UiLocation** | [***Object**](.md) |  | [optional] [default to null]
+**Icon** | [***Object**](.md) |  | [optional] [default to null]
+**DefensiveSquadUsageCostEnabled** | [***Object**](.md) |  | [optional] [default to null]
+**EncounterMessage** | [***Object**](.md) |  | [optional] [default to null]
+**Environment** | [***Object**](.md) |  | [optional] [default to null]
+**DescKeyUnitCriteriaMet** | [***Object**](.md) |  | [optional] [default to null]
+**DefensiveSquadType** | [***Object**](.md) |  | [optional] [default to null]
+**CombatType** | [***Object**](.md) |  | [optional] [default to null]
+**ImageEffect** | [***Object**](.md) |  | [optional] [default to null]
+**UnlockRequirementLocalizationKey** | [***Object**](.md) |  | [optional] [default to null]
+**TerritoryMapId** | [***Object**](.md) |  | [optional] [default to null]
+**PushNotificationTitleKey** | [***Object**](.md) |  | [optional] [default to null]
+**PushNotificationDescKey** | [***Object**](.md) |  | [optional] [default to null]
+**SeasonDefId** | [***Object**](.md) |  | [optional] [default to null]
+**UnlockRequirementId** | [***Object**](.md) |  | [optional] [default to null]
+**Feat** | [***Object**](.md) |  | [optional] [default to null]
+**LinkedStoreItemId** | [***Object**](.md) |  | [optional] [default to null]
+**FactionImage** | [***Object**](.md) |  | [optional] [default to null]
+**DetailsType** | [***Object**](.md) |  | [optional] [default to null]
+**ConquestId** | [***Object**](.md) |  | [optional] [default to null]
+**RankRewardPreview** | [***Object**](.md) |  | [optional] [default to null]
+**IconJoin** | [***Object**](.md) |  | [optional] [default to null]
+**IconSetDefense** | [***Object**](.md) |  | [optional] [default to null]
+**IconAttack** | [***Object**](.md) |  | [optional] [default to null]
+**MarqueeUnitBaseId** | [***Object**](.md) |  | [optional] [default to null]
+**MarqueeUnitTexture** | [***Object**](.md) |  | [optional] [default to null]
+**HideCompleted** | [***Object**](.md) |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

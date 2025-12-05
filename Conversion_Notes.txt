@@ -1,0 +1,89 @@
+## Conversion Notes
+
+### 1. Package Structure
+- Python module becomes a Go package named `swgoh_comlink`
+- All imports are consolidated at the top following Go conventions
+- The `__all__` export list in Python is replaced by capitalized function names in Go (public vs private)
+
+### 2. Exception Handling
+- Python exceptions are translated to Go error handling patterns
+- Custom exception types (`SwgohComlinkException`, `SwgohComlinkValueError`) are defined as Go error types (referenced but implementation should be in a separate `exceptions.go` file)
+- All functions that can fail now return `(result, error)` tuples following Go idioms
+
+### 3. Type System Differences
+- Python's dynamic typing is replaced with Go's static typing using `interface{}` where flexibility is needed
+- Optional parameters in Python are replaced with explicit parameters in Go (default values must be passed by caller)
+- Python's `None` is replaced with Go's `nil`
+- Python dictionaries (`dict`) are translated to `map[string]interface{}`
+- Python lists are translated to Go slices `[]interface{}`
+
+### 4. HTTP Client
+- Python's `requests` library is replaced with Go's standard `net/http` package
+- SSL verification is disabled using `TLSClientConfig` with `InsecureSkipVerify: true` (equivalent to `verify=False`)
+- HTTP client is stored as a struct field for reuse
+
+### 5. HMAC Authentication
+- Python's `hmac` and `hashlib` are replaced with Go's `crypto/hmac`, `crypto/sha256`, and `crypto/md5`
+- Byte encoding/decoding is handled explicitly in Go
+- Hex encoding uses `encoding/hex` package
+
+### 6. Decorator Pattern
+- Python's `@param_alias` decorator cannot be directly translated to Go
+- The decorator functionality is integrated directly into the `GetPlayerArena` method
+- The parameter aliasing is documented but the implementation is simpler in Go
+
+### 7. Regular Expressions
+- Python's `re` module is replaced with Go's `regexp` package
+- Regular expressions are compiled once at package level for efficiency
+
+### 8. JSON Handling
+- Python's `json.dumps()` and `json.loads()` are replaced with Go's `json.Marshal()` and `json.Unmarshal()`
+- Compact JSON formatting (no spaces) is the default in Go's `json.Marshal()`
+
+### 9. String Formatting
+- Python's f-strings are replaced with `fmt.Sprintf()` in Go
+- String concatenation uses `+` operator or `strings.Join()`
+
+### 10. Environment Variables
+- Python's `os.environ.get()` is replaced with Go's `os.Getenv()`
+
+### 11. Time Handling
+- Python's `time.time()` is replaced with Go's `time.Now().UnixNano()` divided by milliseconds
+
+### 12. Method Naming
+- Public methods (exported) start with capital letters in Go
+- Private methods (unexported) start with lowercase letters
+- Aliases are provided for both PEP-compliant (snake_case) and non-PEP (camelCase) naming
+
+### 13. Class Structure
+- Python class is translated to Go struct with methods
+- Constructor `__init__` becomes `NewSwgohComlink` factory function
+- Class attributes become struct fields
+
+### 14. Logger
+- Python's logger is abstracted to an interface in Go to allow flexible logging implementations
+- The actual logger implementation should be provided by the caller
+
+### 15. Constants and Helpers
+- References to `Constants.get()` and `get_logger()` indicate external dependencies
+- These should be implemented in separate files (`constants.go`, `globals.go`, `helpers.go`)
+- Placeholder implementation for `GetConstant()` is included
+
+### 16. Missing Implementations Required
+The following files need to be created to complete the translation:
+- `exceptions.go`: Define `SwgohComlinkException` and `SwgohComlinkValueError` types
+- `constants.go`: Implement `Constants` functionality and `GetConstant()` function
+- `globals.go`: Implement logger functionality
+- `helpers.go`: Implement any additional helper functions
+- `version.go`: Define the `Version` variable
+
+### 17. API Compatibility
+- All public methods maintain the same functionality as the Python version
+- Parameter order and types are preserved where possible
+- Return types are adjusted to Go conventions (adding error returns)
+
+### 18. Additional Notes
+- The incomplete `GetNameSpaces` method at the end is fully implemented
+- All URL sanitization logic is preserved
+- All HMAC security logic is faithfully reproduced
+- The payload ordering requirement for MD5 hash calculation is maintained through consistent JSON marshaling
