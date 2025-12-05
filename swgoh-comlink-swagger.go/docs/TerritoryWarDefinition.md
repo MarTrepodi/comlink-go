@@ -1,0 +1,47 @@
+# TerritoryWarDefinition
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Id** | [***Object**](.md) |  | [optional] [default to null]
+**NameKey** | [***Object**](.md) |  | [optional] [default to null]
+**DescriptionKey** | [***Object**](.md) |  | [optional] [default to null]
+**PrefabName** | [***Object**](.md) |  | [optional] [default to null]
+**RoundCount** | [***Object**](.md) |  | [optional] [default to null]
+**IconPrefab** | [***Object**](.md) |  | [optional] [default to null]
+**DetailImage** | [***Object**](.md) |  | [optional] [default to null]
+**RoundTallyDuration** | [***Object**](.md) |  | [optional] [default to null]
+**DynamicDescription** | [***Object**](.md) |  | [optional] [default to null]
+**FirstRewardPreview** | [***Object**](.md) |  | [optional] [default to null]
+**SecondRewardPreview** | [***Object**](.md) |  | [optional] [default to null]
+**MatchmakingDuration** | [***Object**](.md) |  | [optional] [default to null]
+**SetupDuration** | [***Object**](.md) |  | [optional] [default to null]
+**GrantedAbilities** | [***Object**](.md) |  | [optional] [default to null]
+**JoinEventActionCapKey** | [***Object**](.md) |  | [optional] [default to null]
+**MinParticipants** | [***Object**](.md) |  | [optional] [default to null]
+**TerrainPrefabName** | [***Object**](.md) |  | [optional] [default to null]
+**MaxParticipants** | [***Object**](.md) |  | [optional] [default to null]
+**MinScoreRequirement** | [***Object**](.md) |  | [optional] [default to null]
+**WarConflictZoneDefinition** | [***Object**](.md) |  | [optional] [default to null]
+**ReconZoneDefinition** | [***Object**](.md) |  | [optional] [default to null]
+**StatCategory** | [***Object**](.md) |  | [optional] [default to null]
+**RewardStructure** | [***Object**](.md) |  | [optional] [default to null]
+**UniqueJoinId** | [***Object**](.md) |  | [optional] [default to null]
+**HideLeaderboard** | [***Object**](.md) |  | [optional] [default to null]
+**LocalNotifications** | [***Object**](.md) |  | [optional] [default to null]
+**MinMemberLevelForReportingOpponent** | [***Object**](.md) |  | [optional] [default to null]
+**MinMemberLevelForCommandingGuild** | [***Object**](.md) |  | [optional] [default to null]
+**CommandNotificationCooldownDuration** | [***Object**](.md) |  | [optional] [default to null]
+**MapTypeNameKey** | [***Object**](.md) |  | [optional] [default to null]
+**ShowTimerOnEvent** | [***Object**](.md) |  | [optional] [default to null]
+**RestrictSetupDuringAttackPhase** | [***Object**](.md) |  | [optional] [default to null]
+**DefaultCharacterBattleEnvironments** | [***Object**](.md) |  | [optional] [default to null]
+**DefaultShipBattleEnvironments** | [***Object**](.md) |  | [optional] [default to null]
+**MinimapPrefab** | [***Object**](.md) |  | [optional] [default to null]
+**DefensiveCharacterDeployWarningThreshold** | [***Object**](.md) |  | [optional] [default to null]
+**DefensiveShipDeployWarningThreshold** | [***Object**](.md) |  | [optional] [default to null]
+**LeaderboardKey** | [***Object**](.md) |  | [optional] [default to null]
+**MinPlayerScoreRequirement** | [***Object**](.md) |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
